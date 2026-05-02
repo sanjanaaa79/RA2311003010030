@@ -2,7 +2,6 @@ import { Log } from "../logger";
 
 export const fetchNotifications = async () => {
   try {
-    // Try real API 
     const res = await fetch(
       "http://20.207.122.201/evaluation-service/notifications",
       {
@@ -21,32 +20,19 @@ export const fetchNotifications = async () => {
   } catch (err) {
     await Log("frontend", "error", "api", "CORS error - using mock data");
 
-    // Mock data
+    // 🔥 MOCK DATA (11 items to show top 10)
     return [
-      {
-        ID: "1",
-        Type: "Placement",
-        Message: "Google hiring",
-        Timestamp: "2026-04-22 17:51:30"
-      },
-      {
-        ID: "2",
-        Type: "Result",
-        Message: "Mid sem results",
-        Timestamp: "2026-04-22 17:50:30"
-      },
-      {
-        ID: "3",
-        Type: "Event",
-        Message: "Tech Fest",
-        Timestamp: "2026-04-22 17:49:30"
-      },
-      {
-        ID: "4",
-        Type: "Placement",
-        Message: "Amazon hiring",
-        Timestamp: "2026-04-22 17:52:30"
-      }
+      { ID: "1", Type: "Placement", Message: "Amazon hiring", Timestamp: "2026-04-22 17:52:30" },
+      { ID: "2", Type: "Placement", Message: "Google hiring", Timestamp: "2026-04-22 17:51:30" },
+      { ID: "3", Type: "Result", Message: "Mid sem", Timestamp: "2026-04-22 17:50:30" },
+      { ID: "4", Type: "Event", Message: "Tech fest", Timestamp: "2026-04-22 17:49:30" },
+      { ID: "5", Type: "Placement", Message: "Microsoft hiring", Timestamp: "2026-04-22 17:48:30" },
+      { ID: "6", Type: "Result", Message: "End sem", Timestamp: "2026-04-22 17:47:30" },
+      { ID: "7", Type: "Event", Message: "Hackathon", Timestamp: "2026-04-22 17:46:30" },
+      { ID: "8", Type: "Placement", Message: "Meta hiring", Timestamp: "2026-04-22 17:45:30" },
+      { ID: "9", Type: "Result", Message: "Quiz result", Timestamp: "2026-04-22 17:44:30" },
+      { ID: "10", Type: "Event", Message: "Workshop", Timestamp: "2026-04-22 17:43:30" },
+      { ID: "11", Type: "Placement", Message: "Tesla hiring", Timestamp: "2026-04-22 17:42:30" }
     ];
   }
 };
