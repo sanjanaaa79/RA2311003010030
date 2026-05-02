@@ -69,17 +69,7 @@ Instead of sorting the entire dataset repeatedly:
 * Heap insert: O(log 10) ≈ O(1)
 * Much faster than sorting: O(n log n)
 
----
 
-## API Testing (Postman)
-
-### Notifications API
-
-![Notifications API](screenshots/postman_notifications.png)
-
-### Logs API
-
-![Logs API](screenshots/postman_logs.png)
 
 ---
 
