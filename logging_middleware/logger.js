@@ -18,6 +18,6 @@ export const Log = async (stack, level, pkg, message) => {
       })
     });
   } catch (err) {
-    // silent fail (allowed)
+    // silent fail
   }
 };
